@@ -1,0 +1,62 @@
+<!-- Brand Logo -->
+<a [routerLink]="['/']" class="brand-link">
+    <pf-image
+        src="
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&width=100   100w,
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&width=200   200w,
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&width=400   400w,
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&width=800   800w,
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&width=1200 1200w,
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&width=1600 1600w,
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&width=2000 2000w,
+        https://cdn.builder.io/api/v1/image/assets/TEMP/50c6c260324ce585fe56eced1b0292eac04eeaa98d51dcd9da7e1af6ece7f436?apiKey=d20e9c94b7d84fc1a58e2a177cbb4ca0&
+    "
+        alt="Kemenkeu Logo"
+        class="brand-image"
+        height="32"
+        width="32"
+        rounded="true"
+        style="opacity: 0.8"
+    ></pf-image>
+    <span class="brand-text font-weight-light">Kemenkeu</span>
+</a>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <!-- Sidebar user (optional) -->
+    <div
+        class="user-panel mt-3 pb-2 d-flex"
+        style="justify-content: start; align-items: center"
+    >
+        <pf-image
+            [src]="user?.photoURL"
+            fallbackSrc="assets/img/default-profile.png"
+            style="margin-left: 12px"
+            alt="User Image"
+            width="34"
+            height="34"
+            rounded="true"
+        />
+        <div class="info">
+            <a [routerLink]="['/profile']" class="d-block">
+                {{ user?.email }}
+            </a>
+        </div>
+    </div>
+
+    <div class="form-inline">
+        <app-sidebar-search></app-sidebar-search>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+        <ul
+            class="nav nav-pills nav-sidebar flex-column"
+            data-widget="treeview"
+            role="menu"
+            data-accordion="false"
+        >
+            <app-menu-item *ngFor="let item of menu" [menuItem]="item" />
+        </ul>
+    </nav>
+</div>

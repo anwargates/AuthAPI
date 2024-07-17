@@ -1,0 +1,21 @@
+<!-- dashboard.component.html -->
+<div>
+    <app-content-header [title]="'Dashboard'"></app-content-header>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <app-small-box
+                        [title]="'Total Products'"
+                        [text]="totalData.toString()"
+                        [navigateTo]="'/admin/blank'"
+                        [variant]="'info'"
+                        [icon]="{content: faBox}"
+                        [loading]="isLoading"
+                    ></app-small-box>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
